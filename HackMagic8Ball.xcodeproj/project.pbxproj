@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5BE7068298D45AB00B6E269 /* 8Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BE7067298D45AB00B6E269 /* 8Ball.png */; };
 		A5EFA5FB29882AB200CA3BD7 /* HackMagic8BallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFA5FA29882AB200CA3BD7 /* HackMagic8BallApp.swift */; };
 		A5EFA5FD29882AB200CA3BD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFA5FC29882AB200CA3BD7 /* ContentView.swift */; };
 		A5EFA5FF29882AB700CA3BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5EFA5FE29882AB700CA3BD7 /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5BE7067298D45AB00B6E269 /* 8Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8Ball.png; path = ../../../../8Ball.png; sourceTree = "<group>"; };
+		A5BE7069298D4A0000B6E269 /* 8Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8Ball.png; sourceTree = "<group>"; };
 		A5EFA5F729882AB200CA3BD7 /* HackMagic8Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackMagic8Ball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EFA5FA29882AB200CA3BD7 /* HackMagic8BallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackMagic8BallApp.swift; sourceTree = "<group>"; };
 		A5EFA5FC29882AB200CA3BD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 			children = (
 				A5EFA5FA29882AB200CA3BD7 /* HackMagic8BallApp.swift */,
 				A5EFA5FC29882AB200CA3BD7 /* ContentView.swift */,
+				A5BE7069298D4A0000B6E269 /* 8Ball.png */,
 				A5EFA5FE29882AB700CA3BD7 /* Assets.xcassets */,
 				A5EFA60029882AB700CA3BD7 /* Preview Content */,
 			);
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				A5EFA60129882AB700CA3BD7 /* Preview Assets.xcassets */,
+				A5BE7067298D45AB00B6E269 /* 8Ball.png */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BE7068298D45AB00B6E269 /* 8Ball.png in Resources */,
 				A5EFA60229882AB700CA3BD7 /* Preview Assets.xcassets in Resources */,
 				A5EFA5FF29882AB700CA3BD7 /* Assets.xcassets in Resources */,
 			);
