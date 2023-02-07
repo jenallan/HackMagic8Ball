@@ -11,7 +11,7 @@ import SwiftUI
 struct HackMagic8BallApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoadingView()
         }
     }
 }
