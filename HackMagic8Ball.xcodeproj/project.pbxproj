@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5BE7068298D45AB00B6E269 /* 8Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BE7067298D45AB00B6E269 /* 8Ball.png */; };
-		A5BE706B298D4D2D00B6E269 /* 8Ball2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BE706A298D4D2D00B6E269 /* 8Ball2.png */; };
+		1176A38D2992A21A00A85942 /* 8Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 1176A38C2992A21A00A85942 /* 8Ball.png */; };
 		A5BE706D298D4F4900B6E269 /* QuestionSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BE706C298D4F4900B6E269 /* QuestionSelection.swift */; };
 		A5EFA5FB29882AB200CA3BD7 /* HackMagic8BallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFA5FA29882AB200CA3BD7 /* HackMagic8BallApp.swift */; };
 		A5EFA5FD29882AB200CA3BD7 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFA5FC29882AB200CA3BD7 /* LoadingScreen.swift */; };
@@ -17,9 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A5BE7067298D45AB00B6E269 /* 8Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8Ball.png; path = ../../../../8Ball.png; sourceTree = "<group>"; };
-		A5BE7069298D4A0000B6E269 /* 8Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8Ball.png; sourceTree = "<group>"; };
-		A5BE706A298D4D2D00B6E269 /* 8Ball2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8Ball2.png; path = ../../../8Ball2.png; sourceTree = "<group>"; };
+		1176A38C2992A21A00A85942 /* 8Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8Ball.png; path = HackMagic8Ball/Assets.xcassets/8Ball.imageset/8Ball.png; sourceTree = SOURCE_ROOT; };
 		A5BE706C298D4F4900B6E269 /* QuestionSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSelection.swift; sourceTree = "<group>"; };
 		A5EFA5F729882AB200CA3BD7 /* HackMagic8Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackMagic8Ball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EFA5FA29882AB200CA3BD7 /* HackMagic8BallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackMagic8BallApp.swift; sourceTree = "<group>"; };
@@ -61,8 +58,6 @@
 				A5EFA5FA29882AB200CA3BD7 /* HackMagic8BallApp.swift */,
 				A5EFA5FC29882AB200CA3BD7 /* LoadingScreen.swift */,
 				A5BE706C298D4F4900B6E269 /* QuestionSelection.swift */,
-				A5BE7069298D4A0000B6E269 /* 8Ball.png */,
-				A5BE706A298D4D2D00B6E269 /* 8Ball2.png */,
 				A5EFA5FE29882AB700CA3BD7 /* Assets.xcassets */,
 				A5EFA60029882AB700CA3BD7 /* Preview Content */,
 			);
@@ -72,8 +67,8 @@
 		A5EFA60029882AB700CA3BD7 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				1176A38C2992A21A00A85942 /* 8Ball.png */,
 				A5EFA60129882AB700CA3BD7 /* Preview Assets.xcassets */,
-				A5BE7067298D45AB00B6E269 /* 8Ball.png */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -136,9 +131,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5BE7068298D45AB00B6E269 /* 8Ball.png in Resources */,
+				1176A38D2992A21A00A85942 /* 8Ball.png in Resources */,
 				A5EFA60229882AB700CA3BD7 /* Preview Assets.xcassets in Resources */,
-				A5BE706B298D4D2D00B6E269 /* 8Ball2.png in Resources */,
 				A5EFA5FF29882AB700CA3BD7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
