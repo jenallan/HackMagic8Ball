@@ -10,23 +10,45 @@ import SwiftUI
 struct LoadingView: View {
     struct ContentView: View{
         @State private var startingValue: String = ""
-        
+        let units = ["English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
+        let extraUnits = ["None", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
+        @State private var startingUnit = "Hackley Fan Faves"
+        @State private var extraStartingUnit = "None"
         var body: some View {
             Form{
                 Section{
                     TextField("Enter your question", text: $startingValue)
                 }
             header:
-                { Text("Question")}
-                
-                Section{
-                    Text("Hello World")
+                {
+                    Text("Question")
+                    .font(.custom("AmericanTypewriter",fixedSize: 15))
                 }
-            header:
-                { Text("Response Type")}
-                
+                Section{
+                    Picker("Response Type", selection: $startingUnit){
+                        ForEach(units, id: \.self){
+                            Text("\($0)")
+                        }
+                    }
+                }header:{
+                    Text("Response Type")
+                        .font(.custom("AmericanTypewriter",fixedSize: 15))
+                }
+                Section{
+                    Picker("Response Type", selection: $extraStartingUnit){
+                        ForEach(extraUnits, id: \.self){
+                            Text("\($0)")
+                        }
+                    }
+                }
+                Section{
+                    Picker("Response Type", selection: $extraStartingUnit){
+                        ForEach(extraUnits, id: \.self){
+                            Text("\($0)")
+                        }
+                    }
+                }
             }
-            
         }
     }
     
@@ -35,7 +57,7 @@ struct LoadingView: View {
             Text("Hackley Magic 8 Ball")
                 .font(.custom(
                     "AmericanTypewriter",
-                    fixedSize:36))
+                    fixedSize:25))
             NavigationView{
                 NavigationLink(destination: ContentView())
                 {  Image("8Ball")
