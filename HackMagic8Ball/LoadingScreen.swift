@@ -59,7 +59,7 @@ struct LoadingView: View {
                 Rectangle()
                     .fill(Gradient(colors: [.indigo, .purple]))
                     .ignoresSafeArea()
-                Text("Hackley Magic 8 Ball").font(.custom("American Typewriter", size: 36))
+                Text("Hackley Magic 8 Ball").font(.custom("Papyrus", size: 36))
                     .foregroundColor(.white).offset(x: 0, y:-110)
                 
                 NavigationLink(destination: ContentView())
@@ -74,6 +74,7 @@ struct LoadingView: View {
         }
     }
 }
+
     
     //        VStack {
     //            Text("Hackley Magic 8 Ball")
