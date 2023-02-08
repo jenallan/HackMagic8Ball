@@ -22,7 +22,7 @@ struct LoadingView: View {
             header:
                 {
                     Text("Question")
-                    .font(.custom("AmericanTypewriter",fixedSize: 15))
+                        .font(.custom("AmericanTypewriter",fixedSize: 15))
                 }
                 Section{
                     Picker("Response Type", selection: $startingUnit){
@@ -53,22 +53,25 @@ struct LoadingView: View {
     }
     
     var body: some View {
-        VStack {
-            Text("Hackley Magic 8 Ball")
-                .font(.custom(
-                    "AmericanTypewriter",
-                    fixedSize:25))
-            NavigationView{
+        
+        NavigationView {
+            ZStack {
+                Rectangle()
+                    .fill(Gradient(colors: [.indigo, .purple]))
+                    .ignoresSafeArea()
+                Text("Hackley Magic 8 Ball").font(.custom("American Typewriter", size: 36))
+                    .foregroundColor(.white).offset(x: 0, y:-110)
+                
                 NavigationLink(destination: ContentView())
                 {  Image("8Ball")
                         .resizable()
                         .scaledToFit()
-                    .frame(width: 250, height: 250)}
+                        .frame(width: 250, height: 250).offset(x: 0, y:55)
+                    
+                }
                 
             }
-            
         }
-        
     }
 }
     
@@ -100,9 +103,9 @@ struct LoadingView: View {
     //        .padding()
     
     
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            LoadingView()
-        }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoadingView()
     }
+}
     
