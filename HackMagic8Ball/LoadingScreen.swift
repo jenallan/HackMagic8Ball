@@ -22,33 +22,41 @@ struct LoadingView: View {
             header:
                 {
                     Text("Question")
-                        .font(.custom("AmericanTypewriter",fixedSize: 15))
+                        .font(.system(size: 15))
                 }
                 Section{
-                    Picker("Response Type", selection: $startingUnit){
+                    Picker("Type #1", selection: $startingUnit){
                         ForEach(units, id: \.self){
                             Text("\($0)")
                         }
                     }
                 }header:{
                     Text("Response Type")
-                        .font(.custom("AmericanTypewriter",fixedSize: 15))
+                        .font(.system(size: 15))
                 }
                 Section{
-                    Picker("Response Type", selection: $extraStartingUnit){
+                    Picker("Type #2", selection: $extraStartingUnit){
                         ForEach(extraUnits, id: \.self){
                             Text("\($0)")
                         }
                     }
                 }
                 Section{
-                    Picker("Response Type", selection: $extraStartingUnit){
+                    Picker("Type #3", selection: $extraStartingUnit){
                         ForEach(extraUnits, id: \.self){
                             Text("\($0)")
                         }
                     }
                 }
             }
+// THIS SHOULD MAKE THE BACKGROUND OF THE FORM PURPLE BUT NOT THE ACTUAL INPUT SPOTS BUT IT ISN'T WORKING IDK WHY
+//            .background(Color.purple)
+//            .onAppear {
+//              UITableView.appearance().backgroundColor = .clear
+//            }
+//            .onDisappear {
+//              UITableView.appearance().backgroundColor = .systemGroupedBackground
+//            }
         }
     }
     
@@ -59,8 +67,11 @@ struct LoadingView: View {
                 Rectangle()
                     .fill(Gradient(colors: [.indigo, .purple]))
                     .ignoresSafeArea()
-                Text("Hackley Magic 8 Ball").font(.custom("Papyrus", size: 36))
-                    .foregroundColor(.white).offset(x: 0, y:-110)
+                Text("HACKLEY MAGIC 8 BALL").font(.custom("Papyrus", size: 36))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.white).offset(x: 0, y:-125)
+                Text("click the 8 ball to start").font(.custom("Papyrus", size: 30))
+                    .foregroundColor(.white).offset(x: 0, y:220)
                 
                 NavigationLink(destination: ContentView())
                 {  Image("8Ball")
@@ -75,34 +86,6 @@ struct LoadingView: View {
     }
 }
 
-    
-    //        VStack {
-    //            Text("Hackley Magic 8 Ball")
-    //                .font(.custom(
-    //                "AmericanTypewriter",
-    //                fixedSize:36))
-    
-    
-    //            Button {
-    //                print("Button pressed")
-    //            } label: {
-    //                Image("8Ball")
-    //                    .resizable()
-    //                    .scaledToFit()
-    //                    .frame(width: 250, height: 250)
-    ////                Image(systemName: "8.circle.fill")
-    ////                    .foregroundColor(.black)
-    ////                    .font(.system(size: 250))
-    //            }
-    //            .contentShape(Rectangle())
-    
-    //            Text("Click the 8 Ball to Start")
-    //                .font(.custom(
-    //                "Arial",
-    //                fixedSize:36))
-    //        }
-    //        .padding()
-    
     
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
