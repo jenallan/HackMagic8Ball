@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1176A38D2992A21A00A85942 /* 8Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 1176A38C2992A21A00A85942 /* 8Ball.png */; };
+		A599B0582995589700D33EA2 /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599B0572995589700D33EA2 /* ShakeView.swift */; };
 		A5BE706D298D4F4900B6E269 /* QuestionSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BE706C298D4F4900B6E269 /* QuestionSelection.swift */; };
 		A5EFA5FB29882AB200CA3BD7 /* HackMagic8BallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFA5FA29882AB200CA3BD7 /* HackMagic8BallApp.swift */; };
 		A5EFA5FD29882AB200CA3BD7 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFA5FC29882AB200CA3BD7 /* LoadingScreen.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		1176A38C2992A21A00A85942 /* 8Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8Ball.png; path = HackMagic8Ball/Assets.xcassets/8Ball.imageset/8Ball.png; sourceTree = SOURCE_ROOT; };
+		A599B0572995589700D33EA2 /* ShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
 		A5BE706C298D4F4900B6E269 /* QuestionSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSelection.swift; sourceTree = "<group>"; };
 		A5EFA5F729882AB200CA3BD7 /* HackMagic8Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackMagic8Ball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EFA5FA29882AB200CA3BD7 /* HackMagic8BallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackMagic8BallApp.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				A5EFA5FA29882AB200CA3BD7 /* HackMagic8BallApp.swift */,
 				A5EFA5FC29882AB200CA3BD7 /* LoadingScreen.swift */,
 				A5BE706C298D4F4900B6E269 /* QuestionSelection.swift */,
+				A599B0572995589700D33EA2 /* ShakeView.swift */,
 				A5EFA5FE29882AB700CA3BD7 /* Assets.xcassets */,
 				A5EFA60029882AB700CA3BD7 /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5EFA5FD29882AB200CA3BD7 /* LoadingScreen.swift in Sources */,
+				A599B0582995589700D33EA2 /* ShakeView.swift in Sources */,
 				A5BE706D298D4F4900B6E269 /* QuestionSelection.swift in Sources */,
 				A5EFA5FB29882AB200CA3BD7 /* HackMagic8BallApp.swift in Sources */,
 			);
