@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct LoadingView: View {
-    
     var body: some View {
-        
         NavigationView {
             ZStack {
                 Rectangle()
@@ -27,15 +25,12 @@ struct LoadingView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 250, height: 250).offset(x: 0, y:55)
-                    
                 }
-                
             }
         }
     }
 }
 
-    
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         LoadingView()
