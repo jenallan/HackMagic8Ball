@@ -7,16 +7,34 @@
 
 import SwiftUI
 
+//Put this inside top struct, make navigation view, this should not need to be in another func
+//NavigationLink(
+//    destination: view,
+//    isActive: binding
+//) { EmptyView() }
+
+
+
 struct ShakeView: View{
-    @State private var message = "Unshaken"
+    @State public var message = "Unshaken"
+    @State public var viewChange: Bool = false
     var body: some View {
-        Text(message)
-            .onReceive(NotificationCenter.default.publisher(for: .deviceDidShakeNotification)) { _ in
-                self.message = "Shaken"
-    
+        ZStack {
+            Rectangle()
+                .fill(Gradient(colors: [.indigo, .purple]))
+                .ignoresSafeArea()
+            Image("8Ball")
+                    .resizable()
+                    .scaledToFit()
         }
+            .onReceive(NotificationCenter.default.publisher(for: .deviceDidShakeNotification)) { _ in
+                self.viewChange = true
+                
+            }
+        NavigationLink(destination: ResponsePage(), isActive: $viewChange) { EmptyView() }
     }
 }
+
 
 extension NSNotification.Name {
     public static let deviceDidShakeNotification = NSNotification.Name("MyDeviceDidShakeNotification")
