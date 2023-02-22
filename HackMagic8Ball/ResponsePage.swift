@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct ResponsePage: View {
+    //make array to hold possible text values, eventually an audio array too
+    
+    @State private var message: String = "UR FUTURE"
     var body: some View {
-     Text("4th page!!!!")
+        ZStack {
+            Rectangle()
+                .fill(Gradient(colors: [.indigo, .purple]))
+                .ignoresSafeArea()
+            Image("8BallEmpty")
+                .resizable()
+                .scaledToFit()
+            Text(message).padding(120).multilineTextAlignment(.center)
+        }
     }
 }
 
