@@ -21,7 +21,7 @@ struct LoadingView: View {
                     .foregroundColor(.white).offset(x: 0, y:220)
                 
                 NavigationLink(destination: QuestionSelectionView())
-                {  Image("8Ball")
+                {  Image("8BallCentered")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 250, height: 250).offset(x: 0, y:55)
