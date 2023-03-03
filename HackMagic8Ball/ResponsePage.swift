@@ -7,10 +7,11 @@
 
 import SwiftUI
 
+let responses = ["Yes","No","Maybe","Outlook good", "Ask again later", "Signs point to Yes", "Don't count on it"]
+
+let message = responses.randomElement()!
+
 struct ResponsePage: View {
-    //make array to hold possible text values, eventually an audio array too
-    
-    @State private var message: String = "UR FUTURE"
     var body: some View {
         ZStack {
             Rectangle()
@@ -19,7 +20,7 @@ struct ResponsePage: View {
             Image("8BallEmpty")
                 .resizable()
                 .scaledToFit()
-            Text(message).padding(120).multilineTextAlignment(.center)
+            Text(message).padding(120).font(.custom("Papyrus", size: 20)).multilineTextAlignment(.center).foregroundColor(.black)
         }
     }
 }

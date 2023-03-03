@@ -8,14 +8,16 @@
 import Foundation
 import SwiftUI
 
+let units = ["English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
+let extraUnits = ["None", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
+
 struct QuestionSelectionView: View {
     @State private var startingValue: String = ""
-    let units = ["English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
-    let extraUnits = ["None", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
     @State private var startingUnit = "Hackley Fan Faves"
     @State private var extraStartingUnit = "None"
     var body: some View {
         ZStack {
+            
             Rectangle()
                 .fill(Gradient(colors: [.indigo, .purple]))
                 .ignoresSafeArea()
@@ -54,21 +56,15 @@ struct QuestionSelectionView: View {
                     }
                 }
                 Section{
+//                    var hasAsked = false
+//                    if (startingValue != "") { hasAsked = true }
+//                    NavigationLink(destination: ShakeView(), isActive: $hasAsked)
                     NavigationLink(destination: ShakeView())
                     {
                         Text("SUBMIT")
-                        
                     }
                 }
             }
-    // THIS SHOULD MAKE THE BACKGROUND OF THE FORM PURPLE BUT NOT THE ACTUAL INPUT SPOTS BUT IT ISN'T WORKING IDK WHY
-            .background(Color.purple)
-            .onAppear {
-              UITableView.appearance().backgroundColor = .clear
-            }
-            .onDisappear {
-              UITableView.appearance().backgroundColor = .systemGroupedBackground
-        }
         }
     }
 }
