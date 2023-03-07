@@ -15,6 +15,7 @@ struct QuestionSelectionView: View {
     @State private var startingValue: String = ""
     @State private var startingUnit = "Hackley Fan Faves"
     @State private var extraStartingUnit = "None"
+    @State private var extraStartingUnit2 = "None"
     var body: some View {
         ZStack {
             
@@ -49,7 +50,7 @@ struct QuestionSelectionView: View {
                     }
                 }
                 Section{
-                    Picker("Type #3", selection: $extraStartingUnit){
+                    Picker("Type #3", selection: $extraStartingUnit2){
                         ForEach(extraUnits, id: \.self){
                             Text("\($0)")
                         }
