@@ -9,7 +9,6 @@ import SwiftUI
 
 let responses = ["Yes","No","Maybe","Outlook good", "Ask again later", "Signs point to Yes", "Don't count on it"]
 
-let message = responses.randomElement()!
 
 struct ResponsePage: View {
     var body: some View {
@@ -20,7 +19,8 @@ struct ResponsePage: View {
             Image("8BallEmpty")
                 .resizable()
                 .scaledToFit()
-            Text(message).padding(120).font(.custom("Papyrus", size: 20)).multilineTextAlignment(.center).foregroundColor(.black)
+            
+            Text(responses.randomElement()!).padding(120).font(.custom("Papyrus", size: 20)).multilineTextAlignment(.center).foregroundColor(.black)
         }
     }
 }

@@ -14,9 +14,7 @@ import SwiftUI
 //) { EmptyView() }
 
 
-
 struct ShakeView: View{
-    @State public var message = "Unshaken"
     @State public var viewChange: Bool = false
     var body: some View {
         ZStack {

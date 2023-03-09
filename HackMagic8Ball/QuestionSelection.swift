@@ -16,6 +16,7 @@ struct QuestionSelectionView: View {
     @State private var startingUnit = "Hackley Fan Faves"
     @State private var extraStartingUnit = "None"
     @State private var extraStartingUnit2 = "None"
+    @State var areYouGoingToSecondView: Bool = false
     var body: some View {
         ZStack {
             
@@ -56,16 +57,18 @@ struct QuestionSelectionView: View {
                         }
                     }
                 }
-                Section{
-//                    var hasAsked = false
-//                    if (startingValue != "") { hasAsked = true }
-//                    NavigationLink(destination: ShakeView(), isActive: $hasAsked)
-                    NavigationLink(destination: ShakeView())
-                    {
-                        Text("SUBMIT")
+                
+                Section {
+                    
+                    Button("SUBMIT") {
+                        
+                        self.areYouGoingToSecondView = true
                     }
+                    .disabled(startingValue.isEmpty)
+                    
                 }
             }
+            NavigationLink(destination: ShakeView(), isActive: $areYouGoingToSecondView) { EmptyView() }
         }
     }
 }
