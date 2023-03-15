@@ -11,11 +11,29 @@ import SwiftUI
 let units = ["English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
 let extraUnits = ["None", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
 
+let englishResponses = ["EnglishYes", "EnglishNo"]
+let mathResponses = ["MathYes", "MathNo"]
+let historyResponses = ["hisYes", "hisNo"]
+let scienceResponses = ["EnglishYes", "EnglishNo"]
+let languageResponses = ["MathYes", "MathNo"]
+let artResponses = ["artYes", "ArtNo"]
+let CSResponses = ["CSYes", "CSNo"]
+let deanResponses = ["DeanYes", "DeanNo"]
+let adminResponses = ["adminYes", "adminNo"]
+let hackFavResponses = ["HackYes", "HackNo"]
+
+public let empty: [String] = []
+
 struct QuestionSelectionView: View {
     @State private var startingValue: String = ""
     @State private var startingUnit = "Hackley Fan Faves"
     @State private var extraStartingUnit = "None"
     @State private var extraStartingUnit2 = "None"
+    
+    @State private var choice1 = "None"
+    @State private var choice2 = "None"
+    @State private var choice3 = "None"
+    
     @State var areYouGoingToSecondView: Bool = false
     var body: some View {
         ZStack {
@@ -72,4 +90,5 @@ struct QuestionSelectionView: View {
         }
     }
 }
-       
+
+

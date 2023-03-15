@@ -10,6 +10,7 @@ import SwiftUI
 let responses = ["Yes","No","Maybe","Outlook good", "Ask again later", "Signs point to Yes", "Don't count on it"]
 
 
+
 struct ResponsePage: View {
     var body: some View {
         ZStack {
