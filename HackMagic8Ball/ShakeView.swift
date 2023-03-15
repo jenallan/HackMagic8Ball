@@ -21,14 +21,18 @@ struct ShakeView: View{
             Rectangle()
                 .fill(Gradient(colors: [.indigo, .purple]))
                 .ignoresSafeArea()
-            Text("SHAKE to enter").font(.custom("Papyrus", size: 36))
-                .multilineTextAlignment(.center)
-                .foregroundColor(.white).offset(x: 0, y:-220)
-            Text("the FUTURE").font(.custom("Papyrus", size: 30))
-                .foregroundColor(.white).offset(x: 0, y:220)
-            Image("8BallCentered")
-                    .resizable()
-                    .scaledToFit()
+            VStack{
+                Text("SHAKE to enter").font(.custom("Papyrus", size: 36))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.white)//.offset(x: 0, y:-220)
+                Image("8BallCentered")
+                        .resizable()
+                        .scaledToFit()
+                Text("the FUTURE").font(.custom("Papyrus", size: 30))
+                    .foregroundColor(.white)//.offset(x: 0, y:220)
+                
+            }
+        
         }
             .onReceive(NotificationCenter.default.publisher(for: .deviceDidShakeNotification)) { _ in
                 self.viewChange = true
