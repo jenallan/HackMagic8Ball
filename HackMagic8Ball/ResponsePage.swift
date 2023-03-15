@@ -21,7 +21,7 @@ struct ResponsePage: View {
                 .resizable()
                 .scaledToFit()
             
-            Text(responses.randomElement()!).padding(120).font(.custom("Papyrus", size: 20)).multilineTextAlignment(.center).foregroundColor(.black)
+            Text(empty.randomElement()!).padding(120).font(.custom("Papyrus", size: 20)).multilineTextAlignment(.center).foregroundColor(.black)
         }
     }
 }

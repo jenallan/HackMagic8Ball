@@ -1,7 +1,6 @@
 //
 //  QuestionSelection.swift
 //  HackMagic8Ball
-//
 //  Created by Jennifer Allan on 2/3/23.
 //
 
@@ -22,7 +21,7 @@ let deanResponses = ["DeanYes", "DeanNo"]
 let adminResponses = ["adminYes", "adminNo"]
 let hackFavResponses = ["HackYes", "HackNo"]
 
-public let empty: [String] = []
+public var empty: [String] = []
 
 struct QuestionSelectionView: View {
     @State private var startingValue: String = ""
@@ -86,9 +85,28 @@ struct QuestionSelectionView: View {
                     
                 }
             }
+            .onDisappear{
+               myFunc(var1: startingUnit, var2: extraStartingUnit, var3: extraStartingUnit2)
+                if empty.isEmpty == true {
+                    empty += responses
+                }
+            }
             NavigationLink(destination: ShakeView(), isActive: $areYouGoingToSecondView) { EmptyView() }
         }
     }
 }
 
-
+func myFunc (var1: String, var2: String, var3: String) {
+        if ((var1  == "English Teacher" || var2  == "English Teacher") || var3 == "English Teacher") {
+            empty.append(contentsOf: englishResponses)
+        }
+        if ((var1  == "History Teacher" || var2  == "History Teacher") || var3 == "History Teacher") {
+            empty.append(contentsOf: historyResponses)
+        }
+        if ((var1  == "Math Teacher" || var2  == "Math Teacher") || var3 == "Math Teacher") {
+            empty.append(contentsOf: mathResponses)
+        }
+        if ((var1  == "Science Teacher" || var2  == "Science Teacher") || var3 == "Science Teacher") {
+            empty.append(contentsOf: scienceResponses)
+        }
+    }
