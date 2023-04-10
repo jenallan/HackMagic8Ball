@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-//Put this inside top struct, make navigation view, this should not need to be in another func
-//NavigationLink(
-//    destination: view,
-//    isActive: binding
-//) { EmptyView() }
-
-
 struct ShakeView: View{
     @State public var viewChange: Bool = false
     var body: some View {

@@ -3,29 +3,30 @@
 //  HackMagic8Ball
 //  Created by Jennifer Allan on 2/3/23.
 //
-
 import Foundation
 import SwiftUI
 
-let units = ["English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
+let units = ["All", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
 let extraUnits = ["None", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
 
-let englishResponses = ["EnglishYes", "EnglishNo"]
-let mathResponses = ["MathYes", "MathNo"]
-let historyResponses = ["hisYes", "hisNo"]
-let scienceResponses = ["SciYes", "SciNo"]
-let languageResponses = ["LangYes", "LangNo"]
-let artResponses = ["artYes", "ArtNo"]
-let CSResponses = ["CSYes", "CSNo"]
-let deanResponses = ["DeanYes", "DeanNo"]
-let adminResponses = ["adminYes", "adminNo"]
-let hackFavResponses = ["HackYes", "HackNo"]
+let englishResponses = ["Heh", "Fruit it up!", "That's life in the fast lane", "Oh, sugar and molasses!", "That's a question only you can answer", "Just do your best"]
+let mathResponses = ["It's good to know stuff", "Don't get fatootzed", "The world is your oyster", "This is going to be easy", "You're never going to use this"]
+let historyResponses = ["Si, for all of you that don't know that's yes in Spanish", "Are u kidding me right now"]
+let scienceResponses = ["Good question...I don't know", "Hmmmm...","Focus on the task at hand", "Believe in my methods"]
+let languageResponses = ["On ne sait jamais!", "Si", "No", "Be solution-forward", "Check Schoology", "Phone a friend"]
+let artResponses = ["You tell me", "No way", "Not today another day..."]
+let CSResponses = ["Ask a peer and then come talk to me", "Java.lang.Tranchida : That should have been a thought bubble", "Use the power of two human eyes"]
+let deanResponses = ["Yes", "No"]
+let adminResponses = ["Suck it up buttercup", "You're good to go", "That's a bit of a stretch", "That might be likely", "Yeah, not so much", "Yeah buddy!", "I don't think so!", "It depends..."]
+let hackFavResponses = ["YEESSSS", "That's Crazy", "No", "Like I Don't Know","Absolutely Not", "No way", "Ask Again Later", "100%", "Such a good question"]
+
+let allResponses = englishResponses + mathResponses + historyResponses + scienceResponses + languageResponses + artResponses + CSResponses + deanResponses + adminResponses + hackFavResponses
 
 public var empty: [String] = []
 
 struct QuestionSelectionView: View {
     @State private var startingValue: String = ""
-    @State private var startingUnit = "Hackley Fan Faves"
+    @State private var startingUnit = "All"
     @State private var extraStartingUnit = "None"
     @State private var extraStartingUnit2 = "None"
     
@@ -47,7 +48,7 @@ struct QuestionSelectionView: View {
                         .font(.system(size: 15))
                 }
                 Section{
-                    Picker("Type #1", selection: $startingUnit){
+                    Picker(selection: $startingUnit, label: EmptyView()){
                         ForEach(units, id: \.self){
                             Text("\($0)")
                         }
@@ -70,15 +71,12 @@ struct QuestionSelectionView: View {
                         }
                     }
                 }
-                
                 Section {
                     
                     Button("SUBMIT") {
-                        
                         self.areYouGoingToSecondView = true
                     }
                     .disabled(startingValue.isEmpty)
-                    
                 }
             }
             .onAppear{
@@ -125,5 +123,8 @@ func myFunc (var1: String, var2: String, var3: String) {
         }
         if ((var1  == "Hackley Fan Faves" || var2  == "Hackley Fan Faves") || var3 == "Hackley Fan Faves") {
             empty.append(contentsOf: hackFavResponses)
+        }
+        if (var1  == "All") {
+            empty.append(contentsOf: allResponses)
         }
     }
