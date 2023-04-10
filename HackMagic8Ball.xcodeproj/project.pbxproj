@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1101606429E444EB006301E8 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1101606329E444EB006301E8 /* Components.swift */; };
 		1176A38D2992A21A00A85942 /* 8Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 1176A38C2992A21A00A85942 /* 8Ball.png */; };
 		A599B0582995589700D33EA2 /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599B0572995589700D33EA2 /* ShakeView.swift */; };
 		A599B05A29955BCD00D33EA2 /* ResponsePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599B05929955BCD00D33EA2 /* ResponsePage.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1101606329E444EB006301E8 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		1176A38C2992A21A00A85942 /* 8Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8Ball.png; path = HackMagic8Ball/Assets.xcassets/8Ball.imageset/8Ball.png; sourceTree = SOURCE_ROOT; };
 		A599B0572995589700D33EA2 /* ShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
 		A599B05929955BCD00D33EA2 /* ResponsePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePage.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				A5BE706C298D4F4900B6E269 /* QuestionSelection.swift */,
 				A599B0572995589700D33EA2 /* ShakeView.swift */,
 				A599B05929955BCD00D33EA2 /* ResponsePage.swift */,
+				1101606329E444EB006301E8 /* Components.swift */,
 				A5EFA5FE29882AB700CA3BD7 /* Assets.xcassets */,
 				A5EFA60029882AB700CA3BD7 /* Preview Content */,
 			);
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A599B05A29955BCD00D33EA2 /* ResponsePage.swift in Sources */,
+				1101606429E444EB006301E8 /* Components.swift in Sources */,
 				A5EFA5FD29882AB200CA3BD7 /* LoadingScreen.swift in Sources */,
 				A599B0582995589700D33EA2 /* ShakeView.swift in Sources */,
 				A5BE706D298D4F4900B6E269 /* QuestionSelection.swift in Sources */,
@@ -283,7 +287,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HackMagic8Ball/Preview Content\"";
-				DEVELOPMENT_TEAM = 3GQ8929R29;
+				DEVELOPMENT_TEAM = SRU6LMTT88;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -312,7 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HackMagic8Ball/Preview Content\"";
-				DEVELOPMENT_TEAM = 3GQ8929R29;
+				DEVELOPMENT_TEAM = SRU6LMTT88;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

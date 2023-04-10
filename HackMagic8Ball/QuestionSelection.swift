@@ -38,39 +38,75 @@ struct QuestionSelectionView: View {
                 .fill(Gradient(colors: [.indigo, .purple]))
                 .ignoresSafeArea()
             
-            Form{
-                Section{
-                    TextField("Enter your question", text: $startingValue)
-                }
-            header:
-                {
-                    Text("Question")
-                        .font(.system(size: 15))
-                }
+            //Form{
+            VStack {
+//                Section{
+                
+                Text("Question")
+                    .font(.system(size: 15))
+                    .fontWeight(.bold)
+                
+                
+                CustomTextField(placeholder: "Enter your question", text: $startingValue)
+//                }
+
                 Section{
                     Picker(selection: $startingUnit, label: EmptyView()){
                         ForEach(units, id: \.self){
                             Text("\($0)")
                         }
                     }
+                    .background(
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(Color.white)
+                            .opacity(0.1)
+                            .background(
+                                Color.white
+                                    .opacity(0.005)
+                                    .blur(radius: 10)
+                            )
+                    )
                 }header:{
                     Text("Response Type")
                         .font(.system(size: 15))
                 }
+                
                 Section{
-                    Picker("Type #2", selection: $extraStartingUnit){
+                    Picker(selection: $extraStartingUnit, label: EmptyView()){
                         ForEach(extraUnits, id: \.self){
                             Text("\($0)")
                         }
                     }
                 }
+                .background(
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color.white)
+                        .opacity(0.1)
+                        .background(
+                            Color.white
+                                .opacity(0.005)
+                                .blur(radius: 10)
+                        )
+                )
+                
                 Section{
-                    Picker("Type #3", selection: $extraStartingUnit2){
+                    Picker(selection: $extraStartingUnit2, label: EmptyView()){
                         ForEach(extraUnits, id: \.self){
                             Text("\($0)")
                         }
                     }
                 }
+                .background(
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color.white)
+                        .opacity(0.1)
+                        .background(
+                            Color.white
+                                .opacity(0.005)
+                                .blur(radius: 10)
+                        )
+                )
+                
                 Section {
                     
                     Button("SUBMIT") {
@@ -78,6 +114,16 @@ struct QuestionSelectionView: View {
                     }
                     .disabled(startingValue.isEmpty)
                 }
+                .background(
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color.blue)
+                        .opacity(0.1)
+                        .background(
+                            Color.blue
+                                .opacity(0.005)
+                                .blur(radius: 10)
+                        )
+                )
             }
             .onAppear{
                 empty = []
@@ -88,8 +134,10 @@ struct QuestionSelectionView: View {
                     empty += responses
                 }
             }
-            NavigationLink(destination: ShakeView(), isActive: $areYouGoingToSecondView) { EmptyView() }
         }
+        .foregroundColor(Color.white)
+            NavigationLink(destination: ShakeView(), isActive: $areYouGoingToSecondView) { EmptyView() }
+        
     }
 }
 
