@@ -40,53 +40,67 @@ struct QuestionSelectionView: View {
             
             //Form{
             VStack {
-//                Section{
                 
                 Text("Question")
-                    .font(.system(size: 15))
+                    .font(.system(size: 16))
                     .fontWeight(.bold)
                 
                 
                 CustomTextField(placeholder: "Enter your question", text: $startingValue)
 //                }
+                    .frame(maxWidth: 346)
 
+                Spacer()
+                    .frame(height: 80)
+                
+                Text("Response Type")
+                    .font(.system(size: 16))
+                    .fontWeight(.bold)
+                
                 Section{
                     Picker(selection: $startingUnit, label: EmptyView()){
                         ForEach(units, id: \.self){
                             Text("\($0)")
                         }
                     }
+                    .accentColor(.white)
                     .background(
                         RoundedRectangle(cornerRadius: 25)
                             .fill(Color.white)
                             .opacity(0.1)
+                            .frame(minWidth: 185)
+                            .frame(minHeight: 50)
                             .background(
                                 Color.white
                                     .opacity(0.005)
                                     .blur(radius: 10)
                             )
                     )
-                }header:{
-                    Text("Response Type")
-                        .font(.system(size: 15))
+
+                    .padding()
                 }
-                
+
                 Section{
                     Picker(selection: $extraStartingUnit, label: EmptyView()){
                         ForEach(extraUnits, id: \.self){
                             Text("\($0)")
                         }
                     }
+                    .accentColor(.white)
+                    
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.white)
                         .opacity(0.1)
+                        .frame(minWidth: 185)
+                        .frame(minHeight: 50)
                         .background(
                             Color.white
                                 .opacity(0.005)
                                 .blur(radius: 10)
                         )
+                    
                 )
                 
                 Section{
@@ -95,17 +109,24 @@ struct QuestionSelectionView: View {
                             Text("\($0)")
                         }
                     }
+                    .accentColor(.white)
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.white)
                         .opacity(0.1)
+                        .frame(minWidth: 185)
+                        .frame(minHeight: 50)
                         .background(
                             Color.white
                                 .opacity(0.005)
                                 .blur(radius: 10)
                         )
                 )
+                .padding()
+                
+                Spacer()
+                    .frame(height: 160)
                 
                 Section {
                     
@@ -117,10 +138,14 @@ struct QuestionSelectionView: View {
                 .background(
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.blue)
-                        .opacity(0.1)
+                        .frame(minWidth: 150)
+                        .frame(minHeight: 50)
+                        .opacity(0.3)
                         .background(
                             Color.blue
-                                .opacity(0.005)
+                                .opacity(0.1)
+                                .frame(minWidth: 150)
+                                .frame(minHeight: 50)
                                 .blur(radius: 10)
                         )
                 )
