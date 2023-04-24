@@ -6,13 +6,15 @@
 import Foundation
 import SwiftUI
 
+//ADD POP UP NOTIF FOR WHEN QUESTION NOT ENTERED
+
 let units = ["All", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
 let extraUnits = ["None", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
 
 let englishResponses = ["Heh", "Fruit it up!", "That's life in the fast lane", "Oh, sugar and molasses!", "That's a question only you can answer", "Just do your best"]
 let mathResponses = ["It's good to know stuff", "Don't get fatootzed", "The world is your oyster", "This is going to be easy", "You're never going to use this"]
-let historyResponses = ["Si, for all of you that don't know that's yes in Spanish", "Are u kidding me right now"]
-let scienceResponses = ["Good question...I don't know", "Hmmmm...","Focus on the task at hand", "Believe in my methods"]
+let historyResponses = ["Si, for all of you that don't know that's yes in Spanish", "Are you kidding me right now"]
+let scienceResponses = ["Good question...I don't know", "Hmmmm...","Focus on the task at hand", "Believe in my methods", "Make good choices"]
 let languageResponses = ["On ne sait jamais!", "Si", "No", "Be solution-forward", "Check Schoology", "Phone a friend"]
 let artResponses = ["You tell me", "No way", "Not today another day..."]
 let CSResponses = ["Ask a peer and then come talk to me", "Java.lang.Tranchida : That should have been a thought bubble", "Use the power of two human eyes"]
@@ -29,6 +31,9 @@ struct QuestionSelectionView: View {
     @State private var startingUnit = "All"
     @State private var extraStartingUnit = "None"
     @State private var extraStartingUnit2 = "None"
+    @State private var showingAlert = false
+    @State private var errorTitle = "Error"
+    @State private var errorMessage = "Please type a question"
     
     @State var areYouGoingToSecondView: Bool = false
     var body: some View {
@@ -129,11 +134,23 @@ struct QuestionSelectionView: View {
                     .frame(height: 160)
                 
                 Section {
-                    
-                    Button("SUBMIT") {
-                        self.areYouGoingToSecondView = true
+                    ZStack{
+                        Button("SUBMIT") {
+                            self.areYouGoingToSecondView = true
+                           
+                        }
+                        .disabled(startingValue.isEmpty) //button doesnt navigate when no input
+                        
+                        Button("       "){
+                            showingAlert = true
+                        }
+                        .alert(errorTitle, isPresented: $showingAlert) {
+                            Button("Ok", role: .cancel) {}
+                        } message: {
+                            Text(errorMessage)
+                        }
+                        .disabled(!startingValue.isEmpty)
                     }
-                    .disabled(startingValue.isEmpty)
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 25)
@@ -165,6 +182,7 @@ struct QuestionSelectionView: View {
         
     }
 }
+
 
 func myFunc (var1: String, var2: String, var3: String) {
         if ((var1  == "English Teacher" || var2  == "English Teacher") || var3 == "English Teacher") {
