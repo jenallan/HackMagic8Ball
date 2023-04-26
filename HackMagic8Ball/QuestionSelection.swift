@@ -6,8 +6,6 @@
 import Foundation
 import SwiftUI
 
-//ADD POP UP NOTIF FOR WHEN QUESTION NOT ENTERED
-
 let units = ["All", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
 let extraUnits = ["None", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
 
@@ -220,4 +218,4 @@ func myFunc (var1: String, var2: String, var3: String) {
         if (var1  == "All") {
             empty.append(contentsOf: allResponses)
         }
-    }
+}
