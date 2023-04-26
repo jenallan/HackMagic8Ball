@@ -21,6 +21,8 @@ let CSResponses = ["Ask a peer and then come talk to me", "Java.lang.Tranchida :
 let deanResponses = ["Yes", "No"]
 let adminResponses = ["Suck it up buttercup", "You're good to go", "That's a bit of a stretch", "That might be likely", "Yeah, not so much", "Yeah buddy!", "I don't think so!", "It depends..."]
 let hackFavResponses = ["YEESSSS", "That's Crazy", "No", "Like I Don't Know","Absolutely Not", "No way", "Ask Again Later", "100%", "Such a good question"]
+//[["YESSSSS", "Kylie"], ["No", "Jen"]]
+//["YEESSSS", "That's Crazy", "No", "Like I Don't Know","Absolutely Not", "No way", "Ask Again Later", "100%", "Such a good question"]
 
 let allResponses = englishResponses + mathResponses + historyResponses + scienceResponses + languageResponses + artResponses + CSResponses + deanResponses + adminResponses + hackFavResponses
 
