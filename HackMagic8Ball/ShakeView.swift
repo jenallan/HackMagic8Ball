@@ -27,6 +27,7 @@ struct ShakeView: View{
             }
         
         }
+
             .onReceive(NotificationCenter.default.publisher(for: .deviceDidShakeNotification)) { _ in
                 self.viewChange = true
                 

@@ -10,6 +10,7 @@ let units = ["All", "English Teacher","History Teacher","Math Teacher","Science 
 let extraUnits = ["None", "English Teacher","History Teacher","Math Teacher","Science Teacher", "Language Teacher", "Art Teacher", "Comp Sci Teacher", "Dean", "Administrator", "Hackley Fan Faves"]
 
 let englishResponses = ["Heh", "Fruit it up!", "That's life in the fast lane", "Oh, sugar and molasses!", "That's a question only you can answer", "Just do your best"]
+let englishTeachers = ["Mr. Flanigan", "Dr. Feurgeson", "Dr. Feurgeson", "Oh, sugar and molasses!", "Ms. Moriarty", "Ms. Moriarty"]
 let mathResponses = ["It's good to know stuff", "Don't get fatootzed", "The world is your oyster", "This is going to be easy", "You're never going to use this"]
 let historyResponses = ["Si, for all of you that don't know that's yes in Spanish", "Are you kidding me right now"]
 let scienceResponses = ["Good question...I don't know", "Hmmmm...","Focus on the task at hand", "Believe in my methods", "Make good choices"]
@@ -25,6 +26,8 @@ let hackFavResponses = ["YEESSSS", "That's Crazy", "No", "Like I Don't Know","Ab
 let allResponses = englishResponses + mathResponses + historyResponses + scienceResponses + languageResponses + artResponses + CSResponses + deanResponses + adminResponses + hackFavResponses
 
 public var empty: [String] = []
+public var teacherArray: [String] = []
+var responseinball = "NOT WORKING"
 
 struct QuestionSelectionView: View {
     @State private var startingValue: String = ""
@@ -169,24 +172,30 @@ struct QuestionSelectionView: View {
             }
             .onAppear{
                 empty = []
+                teacherArray = []
             }
             .onDisappear{
-               myFunc(var1: startingUnit, var2: extraStartingUnit, var3: extraStartingUnit2)
-                if empty.isEmpty == true {
-                    empty += responses
-                }
-            }
+                          myFunc(var1: startingUnit, var2: extraStartingUnit, var3: extraStartingUnit2)
+                           if empty.isEmpty == true {
+                               empty += responses
+                           }
+                           responseinball = empty.randomElement()!
+                           myTeacherFunc(var1: startingUnit, var2: extraStartingUnit, var3: extraStartingUnit2)
+                       }
         }
+        .navigationBarBackButtonHidden(true) //ADDED
         .foregroundColor(Color.white)
             NavigationLink(destination: ShakeView(), isActive: $areYouGoingToSecondView) { EmptyView() }
         
     }
+       
 }
 
 
 func myFunc (var1: String, var2: String, var3: String) {
         if ((var1  == "English Teacher" || var2  == "English Teacher") || var3 == "English Teacher") {
             empty.append(contentsOf: englishResponses)
+            
         }
         if ((var1  == "History Teacher" || var2  == "History Teacher") || var3 == "History Teacher") {
             empty.append(contentsOf: historyResponses)
@@ -219,3 +228,40 @@ func myFunc (var1: String, var2: String, var3: String) {
             empty.append(contentsOf: allResponses)
         }
 }
+
+func myTeacherFunc (var1: String, var2: String, var3: String) {
+        if ((var1  == "English Teacher" || var2  == "English Teacher") || var3 == "English Teacher") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if ((var1  == "History Teacher" || var2  == "History Teacher") || var3 == "History Teacher") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if ((var1  == "Math Teacher" || var2  == "Math Teacher") || var3 == "Math Teacher") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if ((var1  == "Science Teacher" || var2  == "Science Teacher") || var3 == "Science Teacher") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if ((var1  == "Language Teacher" || var2  == "Language Teacher") || var3 == "Language Teacher") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if ((var1  == "Art Teacher" || var2  == "Art Teacher") || var3 == "Art Teacher") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if ((var1  == "Comp Sci Teacher" || var2  == "Comp Sci Teacher") || var3 == "Comp Sci Teacher") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if ((var1  == "Dean" || var2  == "Dean") || var3 == "Dean") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if ((var1  == "Administrator" || var2  == "Administrator") || var3 == "Administrator") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if ((var1  == "Hackley Fan Faves" || var2  == "Hackley Fan Faves") || var3 == "Hackley Fan Faves") {
+            teacherArray.append(contentsOf: englishTeachers)
+        }
+        if (var1  == "All") {
+            teacherArray.append(contentsOf: allResponses)
+        }
+    }
+
